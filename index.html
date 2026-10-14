@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tamil Nadu Tourism – Where Stories Never End</title>
+<style>
+:root{--bg:#fffaf2;--surface:#fff;--text:#2a1f1a;--muted:#6b5b52;--brand:#b3261e;--accent:#e8a317;--deep:#4a1410;--line:#eadfce;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1210;--surface:#251b18;--text:#f4e9dc;--muted:#b9a99b;--brand:#e5645a;--accent:#f0b73a;--deep:#0f0807;--line:#3a2b26;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a1210;--surface:#251b18;--text:#f4e9dc;--muted:#b9a99b;--brand:#e5645a;--accent:#f0b73a;--deep:#0f0807;--line:#3a2b26;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Georgia,"Times New Roman",serif}
+h1,h2,h3,nav,button,.btn,.tag{font-family:"Trebuchet MS",Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.top{background:var(--deep);color:#f4e9dc;font:13px "Trebuchet MS",Arial,sans-serif;padding:6px 20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:3px solid var(--accent);display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font:700 20px "Trebuchet MS",Arial,sans-serif;color:var(--brand);letter-spacing:.5px}
+.logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:2px;font-weight:400}
+nav{display:flex;gap:20px;font-size:14px;font-weight:600}
+nav a:hover{color:var(--brand)}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:6px 10px;border-radius:6px;font-size:18px}
+.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 20px;color:#fff;background:linear-gradient(180deg,rgba(40,8,6,.35),rgba(40,8,6,.8)),radial-gradient(circle at 20% 20%,#e8a317 0,transparent 40%),radial-gradient(circle at 80% 70%,#b3261e 0,transparent 50%),linear-gradient(135deg,#7a1b12,#2b0d0a)}
+.hero h1{font-size:clamp(34px,6vw,64px);margin:0 0 12px;line-height:1.1}
+.hero p{max-width:640px;font-size:18px;margin:0 0 26px;opacity:.95}
+.btn{display:inline-block;background:var(--accent);color:#2a1a00;padding:12px 26px;border-radius:30px;font-weight:700;border:0;cursor:pointer;font-size:15px}
+.btn:hover{filter:brightness(1.08)}
+.search{margin-top:26px;display:flex;gap:8px;background:#fff;border-radius:40px;padding:6px;max-width:460px;width:100%}
+.search input{flex:1;border:0;outline:0;padding:8px 14px;font-size:15px;background:transparent;color:#222;min-width:0}
+section{max-width:1150px;margin:0 auto;padding:56px 20px}
+.sh{text-align:center;margin-bottom:32px}
+.sh h2{font-size:clamp(26px,4vw,36px);margin:0 0 8px;color:var(--brand)}
+.sh h2::after{content:"";display:block;width:60px;height:3px;background:var(--accent);margin:10px auto 0}
+.sh p{color:var(--muted);max-width:640px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+.thumb{height:150px;display:flex;align-items:flex-end;padding:10px;color:#fff;font:700 38px sans-serif}
+.card div.b{padding:14px 16px 18px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0 0 10px;font-size:14px;color:var(--muted)}
+.more{color:var(--brand);font:700 13px "Trebuchet MS",Arial,sans-serif}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.alt>section{padding-block:56px}
+.unesco{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.u{padding:20px 14px;text-align:center;border:1px solid var(--line);border-radius:10px;background:var(--bg);font:600 14px "Trebuchet MS",Arial,sans-serif}
+.u span{display:block;font-size:30px;margin-bottom:6px}
+.tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.tabs button{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:8px 18px;border-radius:24px;cursor:pointer;font-size:14px}
+.tabs button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.fest{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+.date{min-width:64px;text-align:center;font:700 13px "Trebuchet MS",Arial,sans-serif;color:var(--brand)}
+.date b{display:block;font-size:28px;line-height:1}
+.news{background:linear-gradient(135deg,#7a1b12,#2b0d0a);color:#fff;text-align:center;padding:50px 20px}
+.news form{display:none}
+.news .row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.news input{padding:12px 18px;border-radius:30px;border:0;min-width:260px;font-size:15px}
+footer{background:var(--deep);color:#d8c8b8;padding:40px 20px 20px;font:14px "Trebuchet MS",Arial,sans-serif}
+.fg{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+footer h4{color:var(--accent);margin:0 0 10px}
+footer a{display:block;padding:2px 0}
+footer a:hover{color:#fff}
+.copy{text-align:center;margin-top:28px;padding-top:16px;border-top:1px solid #3a2b26;font-size:12px}
+@media(max-width:760px){nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);flex-direction:column;padding:14px 20px;border-bottom:1px solid var(--line)}nav.open{display:flex}#menu{display:block}}
+</style>
+</head>
+<body>
+<div class="top"><span>Toll Free: 1800-425-31111</span><span>English | தமிழ்</span></div>
+<header>
+  <a href="#top" class="logo">TAMIL NADU<small>TOURISM</small></a>
+  <button id="menu" aria-label="Menu">☰</button>
+  <nav id="nav">
+    <a href="#places">Places to Visit</a><a href="#todo">Things to Do</a><a href="#eat">Eat &amp; Drink</a><a href="#events">Festivals</a><a href="#plan">Plan Your Trip</a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <h1>Welcome to Tamil Nadu</h1>
+  <p>Vibrant cultures, timeless temples and misty hills — one of the great heartlands of human civilisation, where stories never end.</p>
+  <a href="#places" class="btn">Start Exploring</a>
+  <div class="search"><input id="q" placeholder="Search destinations, e.g. Madurai" aria-label="Search"><button class="btn" id="go">Search</button></div>
+</div>
+
+<section id="places">
+  <div class="sh"><h2>Places to Visit</h2><p>From UNESCO World Heritage Sites to quiet beaches and cool hill stations.</p></div>
+  <div class="grid" id="pgrid"></div>
+</section>
+
+<div class="alt"><section>
+  <div class="sh"><h2>UNESCO World Heritage Sites</h2><p>The cultural capital of India is home to five sites you shouldn't miss.</p></div>
+  <div class="unesco">
+    <div class="u"><span>🛕</span>Brihadeeswara Temple, Thanjavur</div>
+    <div class="u"><span>🌊</span>Shore Temple, Mamallapuram</div>
+    <div class="u"><span>🏛️</span>Airavatesvara Temple, Darasuram</div>
+    <div class="u"><span>👑</span>Gangaikonda Cholapuram</div>
+    <div class="u"><span>🚂</span>Nilgiri Mountain Railway</div>
+  </div>
+</section></div>
+
+<section id="todo">
+  <div class="sh"><h2>Things to Do</h2><p>Fly, dive, hike or simply soak in the culture — there is something for every traveller.</p></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="card"><div class="b" id="tabbody" style="padding:24px"></div></div>
+</section>
+
+<div class="alt" id="eat"><section>
+  <div class="sh"><h2>Eat &amp; Drink</h2><p>Taste the stories simmering in the state's kitchens.</p></div>
+  <div class="grid">
+    <div class="card"><div class="thumb" style="background:linear-gradient(135deg,#e8a317,#b3261e)">🥨</div><div class="b"><h3>Crunchy Snacks</h3><p>Murukku and other tea-time treats you'll want to take home.</p><span class="more">Read more →</span></div></div>
+    <div class="card"><div class="thumb" style="background:linear-gradient(135deg,#2e7d32,#e8a317)">🍛</div><div class="b"><h3>Regional Cuisines</h3><p>Go beyond idli and sambar: Chettinad, Kongu, Nanjil and more.</p><span class="more">Read more →</span></div></div>
+    <div class="card"><div class="thumb" style="background:linear-gradient(135deg,#c2185b,#e8a317)">🍮</div><div class="b"><h3>Sweet Treats</h3><p>Desserts made with lentils, jaggery and ghee.</p><span class="more">Read more →</span></div></div>
+  </div>
+</section></div>
+
+<section id="events">
+  <div class="sh"><h2>Festivals &amp; Events</h2><p>Plan your holiday around the state's colourful calendar.</p></div>
+  <div class="fest"><div class="date">FEB<b>—</b></div><div><h3 style="margin:0">Thai Pongal</h3><span style="color:var(--muted)">Harvest festival celebrated across the state</span></div></div>
+  <div class="fest"><div class="date">OCT<b>—</b></div><div><h3 style="margin:0">Navaratri &amp; Saraswathi Pooja</h3><span style="color:var(--muted)">Golu displays, music and dance in homes and temples</span></div></div>
+  <div class="fest"><div class="date">DEC<b>—</b></div><div><h3 style="margin:0">Margazhi Music Season</h3><span style="color:var(--muted)">Carnatic concerts and Bharatanatyam in Chennai</span></div></div>
+</section>
+
+<div class="alt" id="plan"><section>
+  <div class="sh"><h2>Start Planning</h2><p>Useful information before you travel.</p></div>
+  <div class="grid">
+    <a class="card" href="#"><div class="b"><h3>✈️ How to Reach</h3><p>By air, rail and road.</p></div></a>
+    <a class="card" href="#"><div class="b"><h3>🏨 Where to Stay</h3><p>Heritage hotels to beach resorts.</p></div></a>
+    <a class="card" href="#"><div class="b"><h3>🗺️ Itineraries</h3><p>Ready-made routes for 3 to 10 days.</p></div></a>
+    <a class="card" href="#"><div class="b"><h3>☎️ Contact</h3><p>Toll free: 1800-425-31111</p></div></a>
+  </div>
+</section></div>
+
+<div class="news">
+  <h2 style="margin:0 0 6px">Subscribe to our newsletter</h2>
+  <p style="margin:0;opacity:.9">Monthly events, offers and travel inspiration.</p>
+  <div class="row"><input id="em" type="email" placeholder="Your email address" aria-label="Email"><button class="btn" id="sub">Subscribe</button></div>
+  <p id="msg" style="min-height:24px"></p>
+</div>
+
+<footer>
+  <div class="fg">
+    <div><h4>Tamil Nadu Tourism</h4><p>An unofficial demo page inspired by the official site.</p></div>
+    <div><h4>Explore</h4><a href="#places">Places to Visit</a><a href="#todo">Things to Do</a><a href="#eat">Eat &amp; Drink</a></div>
+    <div><h4>Help</h4><a href="#plan">Plan Your Trip</a><a href="#events">Festivals</a><a href="#">Contact</a></div>
+  </div>
+  <div class="copy">© Demo recreation for learning purposes. Visit the official Tamil Nadu Tourism website for authoritative information.</div>
+</footer>
+
+<script>
+var P=[["Chennai","Gateway to the south, beaches and heritage","linear-gradient(135deg,#0277bd,#80deea)","🌆"],
+["Madurai","Tranquil, Tamil and steeped in the divine","linear-gradient(135deg,#b3261e,#e8a317)","🛕"],
+["Kanyakumari","Sunrise, sunset and the meeting of three seas","linear-gradient(135deg,#ef6c00,#ffd54f)","🌅"],
+["Thanjavur","A glorious Chola city and a work of art","linear-gradient(135deg,#6a1b9a,#e8a317)","🏛️"],
+["Nilgiris","Misty valleys and lush mountain ranges","linear-gradient(135deg,#1b5e20,#a5d6a7)","⛰️"],
+["Mamallapuram","Rock-cut shrines beside the sea","linear-gradient(135deg,#00695c,#ffe082)","🌊"]];
+var g=document.getElementById("pgrid");
+function draw(f){g.innerHTML=P.filter(function(p){return p[0].toLowerCase().indexOf(f)>-1}).map(function(p){return '<div class="card"><div class="thumb" style="background:'+p[2]+'">'+p[3]+'</div><div class="b"><h3>'+p[0]+'</h3><p>'+p[1]+'</p><span class="more">Read more →</span></div></div>'}).join("")||'<p style="grid-column:1/-1;text-align:center;color:var(--muted)">No matching destinations.</p>'}
+draw("");
+function s(){draw(document.getElementById("q").value.trim().toLowerCase());document.getElementById("places").scrollIntoView()}
+document.getElementById("go").onclick=s;
+document.getElementById("q").onkeydown=function(e){if(e.key==="Enter")s()};
+var T={"Parasailing":"Soar above coastal landscapes at some of the country's safest parasailing spots.","Surfing":"Ride the rolling waves and feel the adrenaline on Tamil Nadu's sandy beaches.","Trekking":"Hiking trails across the Western and Eastern Ghats offer solace and views.","Scuba Diving":"Dive into clear waters and meet the marine life below.","Wildlife":"Trails and sanctuaries for an unforgettable wilderness expedition."};
+var tb=document.getElementById("tabs"),body=document.getElementById("tabbody");
+function pick(k){Array.prototype.forEach.call(tb.children,function(b){b.className=b.textContent===k?"on":""});body.innerHTML="<h3 style='margin-top:0'>"+k+"</h3><p style='margin:0'>"+T[k]+"</p>"}
+Object.keys(T).forEach(function(k){var b=document.createElement("button");b.textContent=k;b.onclick=function(){pick(k)};tb.appendChild(b)});
+pick("Parasailing");
+document.getElementById("menu").onclick=function(){document.getElementById("nav").classList.toggle("open")};
+document.getElementById("nav").onclick=function(){this.classList.remove("open")};
+document.getElementById("sub").onclick=function(){var v=document.getElementById("em").value;document.getElementById("msg").textContent=/^\S+@\S+\.\S+$/.test(v)?"Thank you for subscribing!":"Please enter a valid email."};
+</script>
+</body>
+</html>
